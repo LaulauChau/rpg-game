@@ -41,24 +41,7 @@ public abstract class Character {
         this.defensePoint = defensePoint;
     }
 
-    /**
-     * Attack an opponent.
-     *
-     * @param opponent to be attacked
-     * @param damage to be dealt
-     *               if null, the damage will be the player's attack point
-     *               if not null, the damage will be the parameter (used for abilities)
-     */
-    public void attackOpponent(Character opponent, Integer damage) {
-        if (damage == null) {
-            damage = this.attackPoint;
-        }
-
-        damage = damage - opponent.defensePoint;
-
-        opponent.setHealthPoint(opponent.getHealthPoint() - damage);
-        System.out.println(this.name + " attacks " + opponent.name + " and deals " + damage + " damage!");
-    }
+    public abstract void attackOpponent(Character opponent, Integer damage);
 
     public boolean isDead() {
         return this.healthPoint <= 0;

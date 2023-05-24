@@ -108,7 +108,7 @@ public class Game {
 
             if (turnNumber % 2 == 0) {
                 for (Monster monster : room.getMonsters()) {
-                    monster.attackOpponent(player);
+                    monster.attackOpponent(player, null);
                 }
             } else {
                 int playerAction = getPlayerChoice(scanner);

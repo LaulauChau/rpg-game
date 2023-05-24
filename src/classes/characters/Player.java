@@ -48,6 +48,20 @@ public class Player extends Character {
         this.addItem(Item.getRandomItem());
     }
 
+
+    @Override
+    public void attackOpponent(Character opponent, Integer damage) {
+        // Damage is null if the player uses an ability
+        if (damage == null) {
+            damage = this.getAttackPoint();
+        }
+
+        damage = damage - opponent.getDefensePoint();
+
+        opponent.setHealthPoint(opponent.getHealthPoint() - damage);
+        System.out.println(this.getName() + " attacks " + opponent.getName() + " and deals " + damage + " damage!");
+    }
+
     @Override
     public String toString() {
         return this.getName() + " (" + this.getHealthPoint() + " HP, " + this.getAttackPoint() + " ATK, " + this.getDefensePoint() + " DEF, " + this.energyPoint + " ENERGY)";

@@ -1,8 +1,34 @@
 # RPG Game
 This is an immersive, terminal-based role-playing game (RPG) where the user can create a character and explore various dungeons filled with monsters and bosses. The game supports multiple character classes and features a turn-based battle system.
 
-## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+This project was realized as part of the Object-Oriented Programming course at [EFREI Paris](https://eng.efrei.fr/).
+
+## Installation
+
+Follow these steps to install the game on your computer:
+
+### Prerequisites
+- [Java JDK](https://www.oracle.com/java/technologies/downloads/)
+- [Git](https://git-scm.com/downloads)
+
+### Clone the Repository
+Clone the repository to your computer using the following command:
+```
+git clone https://github.com/LaulauChau/rpg-game.git
+```
+
+### Compile the Source Code
+Navigate to the project directory and compile the source code using the following command:
+```
+cd rpg-game
+javac -d bin $(find . -name "*.java")
+```
+
+### Run the Game
+Run the game using the following command:
+```
+java -cp bin Main
+```
 
 ## How to Play
 
@@ -17,3 +43,6 @@ After creating your character, you'll venture into various dungeons. These dange
 
 ### Battle System
 Combat is turn-based, you can choose to attack, use an ability or an item. Defeating monsters regenerate 30% of your current health and grant you a random object.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

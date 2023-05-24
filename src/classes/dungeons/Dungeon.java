@@ -11,7 +11,7 @@ public class Dungeon {
         this.rooms = new ArrayList<>();
 
         Random random = new Random();
-        int numberOfRoom = random.nextInt(5) + 5;
+        int numberOfRoom = random.nextInt(5) + 1;
 
         for (int i = 0; i < numberOfRoom - 1; i++) {
             this.rooms.add(new Room(false));
