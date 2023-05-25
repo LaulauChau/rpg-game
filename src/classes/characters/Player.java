@@ -56,7 +56,7 @@ public class Player extends Character {
             damage = this.getAttackPoint();
         }
 
-        damage = damage - opponent.getDefensePoint();
+        damage = Math.max(damage - opponent.getDefensePoint(), 0);
 
         opponent.setHealthPoint(opponent.getHealthPoint() - damage);
         System.out.println(this.getName() + " attacks " + opponent.getName() + " and deals " + damage + " damage!");

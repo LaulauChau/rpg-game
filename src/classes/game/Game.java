@@ -179,7 +179,7 @@ public class Game {
             }
             case 2 -> {
                 Item item = Item.chooseItem(player, scanner);
-                Item.useItem(item, player, scanner);
+                Item.useItem(item, player);
             }
             case 3 -> {
                 Ability ability = Ability.chooseAbility(scanner);

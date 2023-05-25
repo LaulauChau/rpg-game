@@ -49,7 +49,7 @@ public enum Item {
         return choosenItem;
     }
 
-    public static void useItem(Item item, Player user, Scanner scanner) {
+    public static void useItem(Item item, Player user) {
         System.out.println("You have used " + item.name + "!");
 
         user.setHealthPoint(Math.min(user.getHealthPoint() + item.healthBonus, 100));

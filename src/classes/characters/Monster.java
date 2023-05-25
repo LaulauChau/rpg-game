@@ -22,7 +22,7 @@ public class Monster extends Character {
             return;
         }
 
-        damage = this.getAttackPoint() - opponent.getDefensePoint();
+        damage = Math.max(this.getAttackPoint() - opponent.getDefensePoint(), 0);
 
         opponent.setHealthPoint(opponent.getHealthPoint() - damage);
         System.out.println(this.getName() + " attacks " + opponent.getName() + " and deals " + damage + " damage!");
